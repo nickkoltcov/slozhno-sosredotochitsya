@@ -1,5 +1,5 @@
 .page {
-  font-family: IBM Plex Mono, sans-serif;
+  font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
   line-height: 23.4px;
   color: var(--text-color);
@@ -47,12 +47,12 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--button-color);
   outline: none;
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--button-color);
   pointer-events: none;
 }
 
@@ -70,6 +70,7 @@
   font-size: 18px;
   font-weight: 700;
   margin-block: 55px;
+  align-self: start;
 }
 
 .decorated-zone {
@@ -85,15 +86,15 @@
 }
 
 .decorated-zone::before {
-  border-inline-end: 1px solid var(--h2-color);
-  border-block-start: 1px solid var(--h2-color);
+  border-inline-end: 1px solid var(--header-color);
+  border-block-start: 1px solid var(--header-color);
   inset-inline-end: 10px;
   inset-block-start: 9px;
 }
 
 .decorated-zone::after {
-  border-inline-start: 1px solid var(--h2-color);
-  border-block-end: 1px solid var(--h2-color);
+  border-inline-start: 1px solid var(--header-color);
+  border-block-end: 1px solid var(--header-color);
   inset-inline-start: 10px;
   inset-block-end: 11px;
 }
@@ -119,7 +120,7 @@
   display: inline-block;
   inline-size: 9px;
   block-size: 9px;
-  border-radius: 9px;
+  border-radius: 50%;
   background-color: #ff0070;
   box-shadow: 0 0 4px 2px var(--accent-color);
 }
@@ -132,7 +133,7 @@
 .section__title {
   font-size: 18px;
   font-weight: 700;
-  color: var(--h2-color);
+  color: var(--header-color);
 }
 
 .section__crossline {
@@ -142,7 +143,11 @@
   background-color: var(--bg-color);
 }
 
-.article__m1 {
+.adviсe {
+  font-weight: 400;
+}
+
+.adviсe__margin {
   margin-block-end: 20px;
 }
 
@@ -167,11 +172,21 @@
 }
 
 .link {
+  position: relative;
   text-shadow: 2px 2px 0 var(--link-shadow);
   text-decoration: none;
 }
-.link:hover {
+
+.link:hover::after {
+  content: "";
+  position: absolute;
   text-decoration: underline;
+  text-shadow: none;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--link-line);
 }
 
 .link:focus {
