@@ -112,7 +112,6 @@
   content: "REC";
   font-size: 18px;
   color: #ff0070;
-  z-index: -1;
 }
 
 .rec__icon::after {
