@@ -146,6 +146,10 @@
   background-color: var(--bg-color);
 }
 
+.article__m1 {
+  margin-block-end: 20px;
+}
+
 .section__text {
   font-weight: 400;
 }
@@ -182,6 +186,7 @@
 .link:focus-visible {
   outline: 1px solid currentColor;
 }
+
 
 
 .section__img {
@@ -246,6 +251,7 @@
     inset-inline-start: 20px;
     inset-block-end: 20px;
   }
+
 
   .rec__icon {
     inset-inline-end: 29px;
@@ -316,11 +322,12 @@
 
 
   .header__text {
-    margin-block: 131px;
+    margin-block-start: 131px;
+    margin-block-end: 117px;
    }
 
    .main {
-    padding: 44px 20px 60px;
+    padding: 58px 20px 60px;
     gap:80px;
   }
 
